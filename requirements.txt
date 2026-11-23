@@ -1,13 +1,12 @@
-# Dashboard (app.py) dependencies – this is the file Streamlit Community Cloud installs.
-# Use Python 3.12 (older pinned versions below have no Python 3.14 wheels).
-# scikit-learn is pinned because the saved .joblib models depend on its exact version.
-# xgboost-cpu = the same `xgboost` module without the 200 MB NVIDIA GPU library.
+# Dashboard (app.py) – this is the file Streamlit Community Cloud installs.
+# Tested on Python 3.12 and 3.14 (all packages install from prebuilt wheels).
+# xgboost-cpu = the normal xgboost module without the 200 MB NVIDIA GPU library.
 streamlit==1.45.1
-pandas==2.2.3
-numpy==2.1.3
-scikit-learn==1.6.1
+pandas==2.3.3
+numpy==2.3.5
+scikit-learn==1.8.0
 xgboost-cpu==3.4.1
 lightgbm==4.7.0
 catboost==1.2.10
 plotly==5.24.1
-joblib==1.4.2
+joblib==1.5.2

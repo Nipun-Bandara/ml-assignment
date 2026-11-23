@@ -1,9 +1,18 @@
-# Everything needed to run KadeMila.ipynb (Restart & Run All) plus the dashboard.
-# pip install -r requirements-notebook.txt
--r requirements.txt
+# To run KadeMila.ipynb (Restart & Run All) and reproduce the exact results in it.
+# Use Python 3.12 or 3.13. These are the versions the notebook was run with.
+#   pip install -r requirements-notebook.txt
+pandas==2.2.3
+numpy==2.1.3
+scikit-learn==1.6.1
+xgboost==3.4.1
+lightgbm==4.7.0
+catboost==1.2.10
 statsmodels==0.14.4
 shap==0.54.1
 matplotlib==3.10.0
 seaborn==0.13.2
+joblib==1.4.2
+streamlit==1.45.1
+plotly==5.24.1
 nbformat==5.10.4
 jupyter

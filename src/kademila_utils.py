@@ -5,6 +5,16 @@ from sklearn.base import BaseEstimator, RegressorMixin, clone
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import KFold, cross_val_predict
 
+# The models were saved with scikit-learn 1.6. Newer versions (needed on Python 3.14, e.g. Streamlit Cloud)
+# removed a small helper class that the saved ColumnTransformers refer to, so I add it back before loading.
+# Checked: every model gives exactly the same test predictions with this in place.
+from collections import UserList
+import sklearn.compose._column_transformer as _ct
+if not hasattr(_ct, "_RemainderColsList"):
+    class _RemainderColsList(UserList):
+        pass
+    _ct._RemainderColsList = _RemainderColsList
+
 CAT_COLS = ["market", "admin1", "admin2", "category", "commodity", "unit"]
 NUM_COLS = ["latitude", "longitude", "lag_1", "lag_2", "lag_3", "roll_mean_3", "roll_std_3", "pct_change_1",
             "nat_median_lag1", "rel_to_national", "nat_change_1", "ly_change", "lag1_vs_roll",
