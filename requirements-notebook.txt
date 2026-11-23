@@ -1,0 +1,9 @@
+# Everything needed to run KadeMila.ipynb (Restart & Run All) plus the dashboard.
+# pip install -r requirements-notebook.txt
+-r requirements.txt
+statsmodels==0.14.4
+shap==0.54.1
+matplotlib==3.10.0
+seaborn==0.13.2
+nbformat==5.10.4
+jupyter

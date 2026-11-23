@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WITH_MODELS = "--with-models" in sys.argv
 OUT = ROOT / "submission" / ("KadeMila_submission_with_models.zip" if WITH_MODELS else "KadeMila_submission.zip")
 
-INCLUDE = ["KadeMila.ipynb", "app.py", "requirements.txt", "README.md",
+INCLUDE = ["KadeMila.ipynb", "app.py", "requirements.txt", "requirements-notebook.txt", "README.md",
            "src", "data", "reports", "docs", "video", "slides"] + (["models"] if WITH_MODELS else [])
 SKIP_PARTS = {"__pycache__", ".ipynb_checkpoints", "catboost_info", ".claude", "submission"}
 

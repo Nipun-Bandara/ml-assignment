@@ -9,7 +9,7 @@
 | 4 | Dataset (CSV) | `data/raw/wfp_food_prices_lka.csv`, `data/raw/wfp_markets_lka.csv` (+ `data/processed/`) | ✅ (downloaded from HDX, no scraping script needed) |
 | 5 | Data preparation code | `src/prepare_data.py` | ✅ |
 | 6 | Dashboard code | `app.py`, `src/kademila_utils.py` | ✅ all 7 pages tested |
-| 7 | Requirements | `requirements.txt` | ✅ |
+| 7 | Requirements | `requirements.txt` (dashboard), `requirements-notebook.txt` (notebook) | ✅ |
 | 8 | Results and figures | `reports/` (comparison tables, predictions, 19 figures) | ✅ |
 | 9 | How to run | `README.md` | ✅ |
 | 10 | Trained models (optional) | `models/` (~210 MB) | Optional: the notebook recreates them. Include only if there is no size limit |

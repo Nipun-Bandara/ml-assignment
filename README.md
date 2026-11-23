@@ -5,7 +5,7 @@ Ensemble Learning Dashboard assignment: bagging, boosting, stacking and hybrid m
 
 ## How to run
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-notebook.txt   # notebook + dashboard (requirements.txt = dashboard only)
 python src/prepare_data.py                 # clean data + build features (also run inside the notebook)
 jupyter notebook KadeMila.ipynb            # Kernel → Restart & Run All (≈ 8–10 min, trains and saves all models)
 streamlit run app.py                       # dashboard at http://localhost:8501
